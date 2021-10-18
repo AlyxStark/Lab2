@@ -1,7 +1,6 @@
-// ConsoleApplication4.cpp: определяет точку входа для консольного приложения.
+// ConsoleApplication4.cpp: РѕРїСЂРµРґРµР»СЏРµС‚ С‚РѕС‡РєСѓ РІС…РѕРґР° РґР»СЏ РєРѕРЅСЃРѕР»СЊРЅРѕРіРѕ РїСЂРёР»РѕР¶РµРЅРёСЏ.
 //
 
-#include "stdafx.h"
 #include <iostream>
 #include <conio.h>
 using namespace std;
@@ -11,87 +10,86 @@ int main()
 {
 	setlocale(LC_ALL, "Russian");
 	int a;
-	cout << "Введите число от 1 до 9999: ";
+	cout << "Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ РѕС‚ 1 РґРѕ 9999: ";
 	cin >> a;
-	cout << "Ваше число: ";
+	cout << "Р’Р°С€Рµ С‡РёСЃР»Рѕ: ";
 	if (a < 1 || a>9999) {
-		cout << "Неверное число";
+		cout << "РќРµРІРµСЂРЅРѕРµ С‡РёСЃР»Рѕ";
 		system("PAUSE");
-		return 0;
 	}
 	switch (a / 1000)
 	{
-	case 1: cout << "Одна тысяча "; break;
-	case 2: cout << "Две тысячи "; break;
-	case 3: cout << "Тритысячи "; break;
-	case 4: cout << "Четыре тысячи "; break;
-	case 5: cout << "Пять тысяч "; break;
-	case 6: cout << "Шесть тысяч "; break;
-	case 7: cout << "Семь тысяч "; break;
-	case 8: cout << "Восмь тысяч "; break;
-	case 9: cout << "Девять тысяч "; break;
+	case 1: cout << "РћРґРЅР° С‚С‹СЃСЏС‡Р° "; break;
+	case 2: cout << "Р”РІРµ С‚С‹СЃСЏС‡Рё "; break;
+	case 3: cout << "РўСЂРёС‚С‹СЃСЏС‡Рё "; break;
+	case 4: cout << "Р§РµС‚С‹СЂРµ С‚С‹СЃСЏС‡Рё "; break;
+	case 5: cout << "РџСЏС‚СЊ С‚С‹СЃСЏС‡ "; break;
+	case 6: cout << "РЁРµСЃС‚СЊ С‚С‹СЃСЏС‡ "; break;
+	case 7: cout << "РЎРµРјСЊ С‚С‹СЃСЏС‡ "; break;
+	case 8: cout << "Р’РѕСЃРјСЊ С‚С‹СЃСЏС‡ "; break;
+	case 9: cout << "Р”РµРІСЏС‚СЊ С‚С‹СЃСЏС‡ "; break;
 	}
-	switch (a / 100)
+	switch ((a % 1000) / 100)
 	{
-	case 1: cout << "Сто "; break;
-	case 2: cout << "Двести "; break;
-	case 3: cout << "Триста "; break;
-	case 4: cout << "Четыреста "; break;
-	case 5: cout << "Пятьсот "; break;
-	case 6: cout << "Шестьсот "; break;
-	case 7: cout << "Семьсот "; break;
-	case 8: cout << "Восмьсот "; break;
-	case 9: cout << "Девятьсот "; break;
+	case 1: cout << "СЃС‚Рѕ "; break;
+	case 2: cout << "РґРІРµСЃС‚Рё "; break;
+	case 3: cout << "С‚СЂРёСЃС‚Р° "; break;
+	case 4: cout << "С‡РµС‚С‹СЂРµСЃС‚Р° "; break;
+	case 5: cout << "РїСЏС‚СЊСЃРѕС‚ "; break;
+	case 6: cout << "С€РµСЃС‚СЊСЃРѕС‚ "; break;
+	case 7: cout << "СЃРµРјСЊСЃРѕС‚ "; break;
+	case 8: cout << "РІРѕСЃРјСЊСЃРѕС‚ "; break;
+	case 9: cout << "РґРµРІСЏС‚СЊСЃРѕС‚ "; break;
 	}switch ((a % 100) / 10)
 	{
-	case 2: cout << "двадцать ";break;
-	case 3: cout << "тридцать ";break;
-	case 4: cout << "сорок ";break;
-	case 5: cout << "пятьдесят ";break;
-	case 6: cout << "шестьдесят ";break;
-	case 7: cout << "семьдесят ";break;
-	case 8: cout << "восемьдесят ";break;
-	case 9: cout << "девяносто ";break;
+	case 2: cout << "РґРІР°РґС†Р°С‚СЊ "; break;
+	case 3: cout << "С‚СЂРёРґС†Р°С‚СЊ "; break;
+	case 4: cout << "СЃРѕСЂРѕРє "; break;
+	case 5: cout << "РїСЏС‚СЊРґРµСЃСЏС‚ "; break;
+	case 6: cout << "С€РµСЃС‚СЊРґРµСЃСЏС‚ "; break;
+	case 7: cout << "СЃРµРјСЊРґРµСЃСЏС‚ "; break;
+	case 8: cout << "РІРѕСЃРµРјСЊРґРµСЃСЏС‚ "; break;
+	case 9: cout << "РґРµРІСЏРЅРѕСЃС‚Рѕ "; break;
 	}
-	if (a % 100 >= 10 & a % 100 < 20) {
+	if (a % 100 >= 10 && a % 100 < 20) {
 		switch (a % 100) {
-		case 10: cout << "десять ";break;
-		case 11: cout << "одинадцать ";break;
-		case 12: cout << "двенадцать ";break;
-		case 13: cout << "тринадцать ";break;
-		case 14: cout << "четырнадцать ";break;
-		case 15: cout << "пятнадцать ";break;
-		case 16: cout << "шестнадцать ";break;
-		case 17: cout << "семнадцать ";break;
-		case 18: cout << "восемнадцать ";break;
-		case 19: cout << "девятнадцать ";break;
+		case 10: cout << "РґРµСЃСЏС‚СЊ "; break;
+		case 11: cout << "РѕРґРёРЅР°РґС†Р°С‚СЊ "; break;
+		case 12: cout << "РґРІРµРЅР°РґС†Р°С‚СЊ "; break;
+		case 13: cout << "С‚СЂРёРЅР°РґС†Р°С‚СЊ "; break;
+		case 14: cout << "С‡РµС‚С‹СЂРЅР°РґС†Р°С‚СЊ "; break;
+		case 15: cout << "РїСЏС‚РЅР°РґС†Р°С‚СЊ "; break;
+		case 16: cout << "С€РµСЃС‚РЅР°РґС†Р°С‚СЊ "; break;
+		case 17: cout << "СЃРµРјРЅР°РґС†Р°С‚СЊ "; break;
+		case 18: cout << "РІРѕСЃРµРјРЅР°РґС†Р°С‚СЊ "; break;
+		case 19: cout << "РґРµРІСЏС‚РЅР°РґС†Р°С‚СЊ "; break;
 		}
 	}
 	else {
 		switch (a % 10) {
-		case 1: cout << "один ";break;
-		case 2: cout << "два ";break;
-		case 3: cout << "три ";break;
-		case 4: cout << "четыре ";break;
-		case 5: cout << "пять ";break;
-		case 6: cout << "шесть ";break;
-		case 7: cout << "семь ";break;
-		case 8: cout << "восемь ";break;
-		case 9: cout << "девять ";break;
+		case 1: cout << "РѕРґРёРЅ "; break;
+		case 2: cout << "РґРІР° "; break;
+		case 3: cout << "С‚СЂРё "; break;
+		case 4: cout << "С‡РµС‚С‹СЂРµ "; break;
+		case 5: cout << "РїСЏС‚СЊ "; break;
+		case 6: cout << "С€РµСЃС‚СЊ "; break;
+		case 7: cout << "СЃРµРјСЊ "; break;
+		case 8: cout << "РІРѕСЃРµРјСЊ "; break;
+		case 9: cout << "РґРµРІСЏС‚СЊ "; break;
 		}
 	}
 	if (a % 100 >= 11 && a % 100 <= 19) {
-		cout << "рублей\n";
+		cout << "СЂСѓР±Р»РµР№\n";
 	}
 	else {
 		switch (a % 10)
 		{
-		case 1: cout << "рубль\n";break;
-		case 2: case 3: case 4:  cout << "рубля\n";break;
-		default: cout << "рублей\n"; break;
+		case 1: cout << "СЂСѓР±Р»СЊ\n"; break;
+		case 2: case 3: case 4:  cout << "СЂСѓР±Р»СЏ\n"; break;
+		default: cout << "СЂСѓР±Р»РµР№\n"; break;
 		}
 	}
 	system("PAUSE");
-    return 0;
+	return 0;
 }
 
